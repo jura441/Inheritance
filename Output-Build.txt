@@ -1,0 +1,4 @@
+﻿Build started...
+1>------ Build started: Project: Academy2, Configuration: Debug x64 ------
+1>Academy2.vcxproj -> C:\Users\User\source\repos\Inheritance\x64\Debug\Academy2.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

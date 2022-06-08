@@ -7,3 +7,12 @@ using namespace std;
 	setlocale(LC_ALL, "");
 
 }
+
+	class Base
+	{
+		
+	};
+	class Derived :public Base
+	{
+		
+	};
