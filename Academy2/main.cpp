@@ -47,7 +47,7 @@ public:
 		set_age(age);
 		cout << "HConstructor:\t" << this << endl;
 	}
-	~Human()
+	virtual ~Human()
 	{
 		cout << "HDestructor:\t" << this << endl;
 	}
@@ -176,6 +176,7 @@ public:
 		cout << "Специальность: " << speciality + " " << "Опыт: " << experience << endl;
 	}
 };
+
 class Graduate :public Student
 {
 	std::string diplom;
@@ -209,7 +210,7 @@ public:
 		cout << "GDestructor:\t" << this << endl;
 	}
 	//					Methods:
-	void print()const
+	virtual void print()const
 	{
 		Student::print();
 		cout << "Тема диплома: " << diplom << endl;
@@ -217,6 +218,7 @@ public:
 };
 
 //#define INHERITANCE_CHECK
+
 
 void main()
 {
@@ -251,7 +253,16 @@ void main()
 
 	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
 	{
-		group[i]->print();
+		//RTTI- Runtime Type Information
+		cout << typeid(*group[i]).name() << endl;
+		//group[i]->print();
+		cout << *group[i] << endl;
 		cout << "-------------------------------------------\n";
 	}
+
+	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
+	{
+		delete group[i];
+	}
+
 }
