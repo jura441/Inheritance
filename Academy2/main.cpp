@@ -1,6 +1,7 @@
 ﻿#include"Teacher.h"
 #include"Graduate.h"
 //#define INHERITANCE_CHECK
+#define POLYMORPHISM_CHECK
 
 void main()
 {
@@ -22,6 +23,7 @@ void main()
 	
 	// Generalization
 
+#ifdef POLYMORPHISM_CHECK
 	Human* group[] =
 	{
 		new Student("Pinkman", "Jessy", 23, "Chemistry", "WW_220", 1, 90, 95),
@@ -38,4 +40,6 @@ void main()
 		group[i]->print();
 		cout << "-------------------------------------------\n";
 	}
+#endif // POLYMORPHISM_CHECK
+
 }
