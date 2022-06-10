@@ -59,6 +59,13 @@ public:
 	}
 };
 
+std::ostream& operator<<(std::ostream& os, const Human& obj)
+{
+	return os << obj.get_last_name() 
+		<< " " << obj.get_first_name() 
+		<< " " << obj.get_age() << "years";
+}
+
 #define STUDENT_TAKE_PARAMETERS const std::string& speciality, const std::string& group, unsigned int year, double rating, double attendance
 #define STUDENT_GIVE_PARAMETERS speciality, group, year, rating, attendance
 
@@ -132,6 +139,17 @@ public:
 	}
 };
 
+std::ostream& operator<<(std::ostream& os, const Student& obj)
+{
+	//os << (Human&)obj;
+	return os <<(Human&)obj
+		<< obj.get_speciality()
+		<< " " << obj.get_group()
+		<< " " << obj.get_year()
+		<< " " << obj.get_rating()
+		<< " " << obj.get_attendance();
+}
+
 class Teacher :public Human
 {
 	std::string speciality;
@@ -177,6 +195,13 @@ public:
 	}
 };
 
+std::ostream& operator<< (std::ostream& os, const Teacher& obj)
+{
+	return os << (Human&)obj
+		<< obj.get_speciality()
+		<< " " << obj.get_experience();
+}
+
 class Graduate :public Student
 {
 	std::string diplom;
@@ -217,6 +242,11 @@ public:
 	}
 };
 
+std::ostream& operator << (std::ostream& os, const Graduate& obj)
+{
+	return os << (Student&)obj << obj.get_diplom();
+}
+
 //#define INHERITANCE_CHECK
 
 
@@ -256,7 +286,10 @@ void main()
 		//RTTI- Runtime Type Information
 		cout << typeid(*group[i]).name() << endl;
 		//group[i]->print();
-		cout << *group[i] << endl;
+		//cout << *group[i] << endl;
+		if (typeid(*group[i]) == typeid(Teacher))cout << *dynamic_cast<Teacher*>(group[i]) << endl;
+		if (typeid(*group[i]) == typeid(Student))cout << *dynamic_cast<Student*>(group[i]) << endl;
+		if (typeid(*group[i]) == typeid(Graduate))cout << *dynamic_cast<Graduate*>(group[i]) << endl;
 		cout << "-------------------------------------------\n";
 	}
 
