@@ -1,20 +1,13 @@
 #pragma once
-#include "std.h"
-#include "Human.h"
 #include "Teacher.h"
 
 class Graduate :public Student
 {
 	std::string diplom;
 public:
-	const std::string& get_diplom()const
-	{
-		return diplom;
-	}
-	void set_diplom(const std::string& diplom)
-	{
-		this->diplom = diplom;
-	}
+	const std::string& get_diplom()const;
+	void set_diplom(const std::string& diplom);
+	
 
 	//			Constructors:
 	Graduate
@@ -31,14 +24,8 @@ public:
 		set_diplom(diplom);
 		cout << "GConstructor:\t" << this << endl;
 	}
-	~Graduate()
-	{
-		cout << "GDestructor:\t" << this << endl;
-	}
+	~Graduate();
+	
 	//					Methods:
-	void print()const
-	{
-		Student::print();
-		cout << "Тема диплома: " << diplom << endl;
-	}
+	void print()const;	
 };

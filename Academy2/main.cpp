@@ -1,5 +1,9 @@
 ﻿#include"Teacher.h"
 #include"Graduate.h"
+
+
+
+
 //#define INHERITANCE_CHECK
 #define POLYMORPHISM_CHECK
 
