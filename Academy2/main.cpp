@@ -1,4 +1,5 @@
 #include<iostream>
+#include<fstream>
 #include<string>
 using std::cin;
 using std::cout;
@@ -244,6 +245,8 @@ void main()
 #endif // INHERITANCE_CHECK
 	
 	// Generalization
+	std::ofstream fout;							//1) создаем поток
+	fout.open("File.txt", std::ios_base::app);
 
 	Human* group[] =
 	{
@@ -256,18 +259,19 @@ void main()
 
 	};
 
+
 	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
 	{
 		//RTTI- Runtime Type Information
-		cout << typeid(*group[i]).name() << endl;
+		fout << typeid(*group[i]).name() << endl;
 		//group[i]->print();
-		cout << *group[i] << endl;
-		cout << "-------------------------------------------\n";
+		fout << *group[i] << endl;
+		fout << "-------------------------------------------\n";
 	}
+	fout.close();
 
 	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
 	{
 		delete group[i];
 	}
-
 }

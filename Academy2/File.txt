@@ -1,0 +1,165 @@
+class Student
+Pinkman Jessy 23 years.
+Специальность: Chemistry Группа: WW_220 Курс: 1 Рейтинг: 90 Посещаемость: 95
+
+-------------------------------------------
+class Teacher
+White Walter 50 years.
+Специальность: Chemistry Опыт: 25
+
+-------------------------------------------
+class Graduate
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Тема диплома: How to catch Heisenberg
+
+-------------------------------------------
+class Student
+Vercetti Tomas 30 years.
+Специальность: Theft Группа: Vice Курс: 3 Рейтинг: 90 Посещаемость: 85
+
+-------------------------------------------
+class Teacher
+Diaz Ricardo 50 years.
+Специальность: Weapons distribution Опыт: 20
+
+-------------------------------------------
+class Teacher
+Eisenstein Albert 143 years.
+Специальность: Astronomy Опыт: 100
+
+-------------------------------------------
+class Student
+Pinkman Jessy 23 years.
+Специальность: Chemistry Группа: WW_220 Курс: 1 Рейтинг: 90 Посещаемость: 95
+
+-------------------------------------------
+class Teacher
+White Walter 50 years.
+Специальность: Chemistry Опыт: 25
+
+-------------------------------------------
+class Graduate
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Тема диплома: How to catch Heisenberg
+
+-------------------------------------------
+class Student
+Vercetti Tomas 30 years.
+Специальность: Theft Группа: Vice Курс: 3 Рейтинг: 90 Посещаемость: 85
+
+-------------------------------------------
+class Teacher
+Diaz Ricardo 50 years.
+Специальность: Weapons distribution Опыт: 20
+
+-------------------------------------------
+class Teacher
+Eisenstein Albert 143 years.
+Специальность: Astronomy Опыт: 100
+
+-------------------------------------------
+class Student
+Pinkman Jessy 23 years.
+Специальность: Chemistry Группа: WW_220 Курс: 1 Рейтинг: 90 Посещаемость: 95
+
+-------------------------------------------
+class Teacher
+White Walter 50 years.
+Специальность: Chemistry Опыт: 25
+
+-------------------------------------------
+class Graduate
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Тема диплома: How to catch Heisenberg
+
+-------------------------------------------
+class Student
+Vercetti Tomas 30 years.
+Специальность: Theft Группа: Vice Курс: 3 Рейтинг: 90 Посещаемость: 85
+
+-------------------------------------------
+class Teacher
+Diaz Ricardo 50 years.
+Специальность: Weapons distribution Опыт: 20
+
+-------------------------------------------
+class Teacher
+Eisenstein Albert 143 years.
+Специальность: Astronomy Опыт: 100
+
+-------------------------------------------
+class Student
+Pinkman Jessy 23 years.
+Специальность: Chemistry Группа: WW_220 Курс: 1 Рейтинг: 90 Посещаемость: 95
+
+-------------------------------------------
+class Teacher
+White Walter 50 years.
+Специальность: Chemistry Опыт: 25
+
+-------------------------------------------
+class Graduate
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Тема диплома: How to catch Heisenberg
+
+-------------------------------------------
+class Student
+Vercetti Tomas 30 years.
+Специальность: Theft Группа: Vice Курс: 3 Рейтинг: 90 Посещаемость: 85
+
+-------------------------------------------
+class Teacher
+Diaz Ricardo 50 years.
+Специальность: Weapons distribution Опыт: 20
+
+-------------------------------------------
+class Teacher
+Eisenstein Albert 143 years.
+Специальность: Astronomy Опыт: 100
+
+-------------------------------------------
+class Student
+Pinkman Jessy 23 years.
+Специальность: Chemistry Группа: WW_220 Курс: 1 Рейтинг: 90 Посещаемость: 95
+
+-------------------------------------------
+class Teacher
+White Walter 50 years.
+Специальность: Chemistry Опыт: 25
+
+-------------------------------------------
+class Graduate
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Schreder Hank 40 years.
+Специальность: Criminalistics Группа: WW_220, Курс: 5 Рейтинг: 95 Посещаемость: 80
+Тема диплома: How to catch Heisenberg
+
+-------------------------------------------
+class Student
+Vercetti Tomas 30 years.
+Специальность: Theft Группа: Vice Курс: 3 Рейтинг: 90 Посещаемость: 85
+
+-------------------------------------------
+class Teacher
+Diaz Ricardo 50 years.
+Специальность: Weapons distribution Опыт: 20
+
+-------------------------------------------
+class Teacher
+Eisenstein Albert 143 years.
+Специальность: Astronomy Опыт: 100
+
+-------------------------------------------
