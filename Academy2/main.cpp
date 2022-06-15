@@ -1,6 +1,7 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<fstream>
 #include<string>
+#include<iomanip>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -54,15 +55,26 @@ public:
 	}
 
 	//					Methods:
-	virtual std:: ostream& print(std::ostream& os /*= std::cout*/)const
+	virtual std:: ostream& print(std::ostream& os)const
 	{
 		return os << last_name << " " << first_name << " " << age << " years.\n";
+	}
+	virtual std:: ofstream& print(std::ofstream& ofs)const
+	{
+		ofs.width(20);
+		ofs << std::left;
+		 ofs << last_name + " " + first_name << age;
+		 return ofs;
 	}
 };
 
 std::ostream& operator<<(std::ostream& os, const Human& obj)
 {
 	return obj.print(os);
+}
+std::ofstream& operator<<(std::ofstream& ofs, const Human& obj)
+{
+	return obj.print(ofs);
 }
 
 #define STUDENT_TAKE_PARAMETERS const std::string& speciality, const std::string& group, unsigned int year, double rating, double attendance
@@ -134,8 +146,23 @@ public:
 	std::ostream& print(std::ostream& os)const
 	{
 		Human::print(os);
-		return os << "Ñïåöèàëüíîñòü: " << speciality + " " + "Ãðóïïà: " + group << " " << "Êóðñ: " << year << " " << "Ðåéòèíã: " << rating << " " << "Ïîñåùàåìîñòü: " << attendance << endl;
+		return os << "Ð¡Ð¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: " << speciality + " " + "Ð“Ñ€ÑƒÐ¿Ð¿Ð°: " + group << " " << "ÐšÑƒÑ€Ñ: " << year << " " << "Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: " << rating << " " << "ÐŸÐ¾ÑÐµÑ‰Ð°ÐµÐ¼Ð¾ÑÑ‚ÑŒ: " << attendance << endl;
 	}
+	std::ofstream& print(std::ofstream& ofs)const
+	{
+		Human::print(ofs)<< " ";
+		ofs.width(20);
+		ofs << std::left;
+		ofs << speciality;
+		ofs.width(8);
+		ofs << group << " " << year;
+		ofs.width(8);
+		ofs << std::right;
+		ofs << std::setprecision(2) << std::fixed;
+		ofs<< rating << " " << attendance;
+		return ofs;
+	}
+
 };
 
 class Teacher :public Human
@@ -179,7 +206,13 @@ public:
 std::ostream& print(std::ostream& os)const
 	{
 		Human::print(os);
-		return os << "Ñïåöèàëüíîñòü: " << speciality + " " << "Îïûò: " << experience << endl;
+		return os << "Ð¡Ð¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚ÑŒ: " << speciality + " " << "ÐžÐ¿Ñ‹Ñ‚: " << experience << endl;
+	}
+std::ofstream& print(std::ofstream& ofs)const
+	{
+		Human::print(ofs);
+		ofs << speciality << " " << experience;
+		return ofs;
 	}
 };
 
@@ -218,8 +251,12 @@ public:
 	//					Methods:
 	std::ostream& print(std::ostream& os)const
 	{
-		Student::print(os);
-		return Student::print(os) << "Òåìà äèïëîìà: " << diplom << endl;
+		return Student::print(os) << "Ð¢ÐµÐ¼Ð° Ð´Ð¸Ð¿Ð»Ð¾Ð¼Ð°: " << diplom << endl;
+	}
+	std::ofstream& print(std::ofstream& ofs)const
+	{
+		Student::print(ofs) << diplom;
+		return ofs;
 	}
 };
 
@@ -240,35 +277,38 @@ void main()
 	Teacher teacher("Ivanov", "Ivan", 43, "Chemistry", 20);
 	teacher.print();
 
-	Graduate graduate("Sidorov", "Alexey", 22, "Programming", "WW_420", 4, 90, 45, "Ñ++");
+	Graduate graduate("Sidorov", "Alexey", 22, "Programming", "WW_420", 4, 90, 45, "Ð¡++");
 	graduate.print();
 #endif // INHERITANCE_CHECK
 	
 	// Generalization
-	std::ofstream fout;							//1) ñîçäàåì ïîòîê
-	fout.open("File.txt", std::ios_base::app);
-
+	
 	Human* group[] =
 	{
-		new Student("Pinkman", "Jessy", 23, "Chemistry", "WW_220", 1, 90, 95),
+		new Student("Pinkman", "Jessy", 23, "Chemistry", "WW_220", 1, 91.2, 95),
 		new Teacher("White", "Walter", 50, "Chemistry", 25),
-		new Graduate("Schreder", "Hank", 40, "Criminalistics", "WW_220,", 5, 95, 80, "How to catch Heisenberg"),
+		new Graduate("Schreder", "Hank", 40, "Criminalistics", "WW_220,", 5, 87.22, 80, "How to catch Heisenberg"),
 		new Student("Vercetti", "Tomas", 30, "Theft", "Vice", 3, 90, 85),
 		new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20),
 		new Teacher("Eisenstein", "Albert", 143, "Astronomy", 100)
 
 	};
 
-
+	std::ofstream fout("Academy.txt");
+	cout << "-------------------------------------------\n";
 	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
 	{
 		//RTTI- Runtime Type Information
-		fout << typeid(*group[i]).name() << endl;
 		//group[i]->print();
+		cout << typeid(*group[i]).name() << endl;
+		cout << *group[i] << endl;
+		//cout << "-------------------------------------------\n";
+
 		fout << *group[i] << endl;
-		fout << "-------------------------------------------\n";
+		//fout << "-------------------------------------------\n";
 	}
 	fout.close();
+	system("notepad Academy.txt");
 
 	for (int i = 0; i < sizeof(group) / sizeof(group[0]); i++)
 	{
